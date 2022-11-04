@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+layout:decorator="template">
+<link rel="stylesheet" type="text/css"
+href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css" />
+<head>
+<meta charset="utf-8">
+<title>Ajout des Voitures</title>
+</head>
+<body>
+<div layout:fragment="Mycontent">
+<div class="container mt-5">
+<div class="card">
+<div class="card-header"> Ajout des Voitures </div>
+<div class="card-body">
+<form th:action="@{saveVoiture}" method="post">
+<div class="form-group">
+<label class="control-label">Nom Voiture :</label>
+<input type="text" name="nomVoiture" class="form-control" />
+</div>
+<div class="form-group">
+<label class="control-label">Prix Voiture :</label>
+<input type="text" name="prixVoiture" class="form-control" />
+</div>
+<div class="form-group">
+<label class="control-label">date création :</label>
+<input type="date" name="dateCreation" class="form-control" />
+</div>
+<div>
+<button type="submit" class="btn btn-primary">Valider</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
